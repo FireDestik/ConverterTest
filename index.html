@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Minimalist Converter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-card">
+        <h1>Конвертер</h1>
+
+        <nav class="tab-navigation">
+            <button class="tab-btn active" onclick="openTab(event, 'currency-section')">Валюта</button>
+            <button class="tab-btn" onclick="openTab(event, 'volume-section')">Объём</button>
+        </nav>
+
+        <section id="currency-section" class="tab-content active">
+            <div class="input-group">
+                <select id="cur-from">
+                    <option value="RUB">RUB</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="CNY">CNY</option>
+                    <option value="KZT">KZT</option>
+                    <option value="PLN">PLN</option>
+                </select>
+                
+                <input type="number" id="cur-amount" placeholder="Сумма">
+                
+                <select id="cur-type">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="CNY">CNY</option>
+                    <option value="RUB">RUB</option>
+                    <option value="KZT">KZT</option>
+                    <option value="PLN">PLN</option>
+                </select>
+                <button id="cur-calc-btn">ОК</button>
+            </div>
+            <div id="cur-result-display" class="result-box">Введите данные...</div>
+            <div id="server-status" style="font-size: 10px; margin-top: 10px; color: #888;"></div>
+        </section>
+
+        <section id="volume-section" class="tab-content">
+            <div class="input-group">
+                <input type="number" id="volume-input" placeholder="Литры">
+                <select id="volume-type">
+                    <option value="ml">Миллилитры</option>
+                    <option value="cup">Стаканы</option>
+                </select>
+                <button id="volume-btn">ОК</button>
+            </div>
+            <div class="result-box" id="volume-result">Результат: 0</div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
