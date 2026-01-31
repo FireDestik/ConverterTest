@@ -1,3 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+.input-group select, 
+.input-group input {
+    min-width: 0; 
+}
+select {
+    padding: 0 5px 0 10px; /* Меньше отступ справа */
+    text-overflow: ellipsis; /* Добавит троеточие, если текст совсем не влезет */
+}
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #f0f2f5;
@@ -43,6 +54,7 @@ h1 {
 }
 
 .tab-btn:hover {
+    background: none;
     color: #333;
 }
 
@@ -62,8 +74,9 @@ h1 {
 
 .input-group {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     align-items: center;
+    width: 100%;
 }
 
 input, select, button {
@@ -77,17 +90,22 @@ input, select, button {
 }
 
 input { flex: 2; }
-select { flex: 1; }
-button { 
-    flex: 1; 
-    background: #000;
-    color: #fff;
-    border: none;
+select { flex: 1.5; }
+button {
     cursor: pointer;
+    transition: 0.3s;
+    background: #fff; /* Установим белый фон изначально */
+    border: 1px solid #ddd;
+    flex-shrink: 0; /* Чтобы кнопки (ОК и Свап) не сплющивались */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 button:hover {
     background: #333;
+    color: #fff;
+    border-color: #333;
 }
 
 .result-box {
@@ -99,4 +117,68 @@ button:hover {
     text-align: center;
     font-weight: 600;
     font-size: 18px;
+}
+.swap-btn {
+    flex: 0 0 45px;
+    height: 45px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.swap-btn:hover {
+    background: #e9ecef;
+    border-color: #bbb;
+}
+
+.swap-btn:active {
+    transform: scale(0.9);
+}
+#cur-amount {
+    flex: 1;
+    min-width: 70px;
+}
+#cur-from, #cur-type {
+    flex: 1.5;
+    min-width: 0; 
+}
+.card-footer {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.action-area {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.primary-btn {
+    min-width: 120px;
+    height: 45px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.primary-btn:hover {
+    background-color: #000;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.primary-btn:active {
+    transform: translateY(0);
+}
+.result-box {
+    margin-top: 0; 
 }

@@ -19,43 +19,72 @@
         <section id="currency-section" class="tab-content active">
             <div class="input-group">
                 <select id="cur-from">
-                    <option value="RUB">RUB</option>
-                    <option value="USD">USD</option>
-                    <option value="EUR">EUR</option>
-                    <option value="CNY">CNY</option>
-                    <option value="KZT">KZT</option>
-                    <option value="PLN">PLN</option>
+                    <option value="RUB">Рос. Рубли</option>
+                    <option value="BYN">Бел. Рубли</option>
+                    <option value="USD">Доллар США</option>
+                    <option value="CAD">Доллар Канады</option>
+                    <option value="EUR">Евро</option>
+                    <option value="CNY">Юани</option>
+                    <option value="KZT">Тенге</option>
+                    <option value="PLN">Злоты</option>
+                    <option value="UAH">Гривны</option>
+                    <option value="JPY">Иены</option>
                 </select>
-                
+                <button id="cur-swap-btn" class="swap-btn" title="Свапнуть валюты">⇄</button>
                 <input type="number" id="cur-amount" placeholder="Сумма">
                 
                 <select id="cur-type">
-                    <option value="USD">USD</option>
-                    <option value="EUR">EUR</option>
-                    <option value="CNY">CNY</option>
-                    <option value="RUB">RUB</option>
-                    <option value="KZT">KZT</option>
-                    <option value="PLN">PLN</option>
+                    <option value="RUB">Рос. Рубли</option>
+                    <option value="BYN">Бел. Рубли</option>
+                    <option value="USD">Доллар США</option>
+                    <option value="CAD">Доллар Канады</option>
+                    <option value="EUR">Евро</option>
+                    <option value="CNY">Юани</option>
+                    <option value="KZT">Тенге</option>
+                    <option value="PLN">Злоты</option>
+                    <option value="UAH">Гривны</option>
+                    <option value="JPY">Иены</option>
                 </select>
-                <button id="cur-calc-btn">ОК</button>
+                
+            </div>
+            <div class="action-area">
+            <button id="cur-calc-btn" class="primary-btn">ОК</button>
             </div>
             <div id="cur-result-display" class="result-box">Введите данные...</div>
             <div id="server-status" style="font-size: 10px; margin-top: 10px; color: #888;"></div>
         </section>
 
         <section id="volume-section" class="tab-content">
-            <div class="input-group">
-                <input type="number" id="volume-input" placeholder="Литры">
-                <select id="volume-type">
-                    <option value="ml">Миллилитры</option>
-                    <option value="cup">Стаканы</option>
-                </select>
-                <button id="volume-btn">ОК</button>
-            </div>
-            <div class="result-box" id="volume-result">Результат: 0</div>
-        </section>
+    <div class="input-group">
+        <select id="volume-from">
+            <option value="l">Литры</option>
+            <option value="ml">Миллилитры</option>
+            <option value="cup">Стаканы</option>
+            <option value="tsp">Чайные ложки</option>
+            <option value="tbsp">Столовые ложки</option>
+            <option value="floz">Жидкие унции (США)</option>
+        </select>
+        <button id="vol-swap-btn" class="swap-btn" title="Свапнуть">⇄</button>
+        <input type="number" id="volume-input" placeholder="Значение">
+        <select id="volume-to">
+            <option value="l">Литры</option>
+            <option value="ml">Миллилитры</option>
+            <option value="cup">Стаканы</option>
+            <option value="tsp">Чайные ложки</option>
+            <option value="tbsp">Столовые ложки</option>
+            <option value="floz">Жидкие унции (США)</option>
+        </select>
     </div>
-
+    <div class="action-area">
+        <button id="volume-btn" class="primary-btn">ОК</button>
+    </div>
+    <div class="result-box" id="volume-result">Результат: 0</div>
+</section>
+<footer class="card-footer">
+            &copy; 2026 Все права не защищены
+        </footer>
+    </div>
+    
     <script src="app.js"></script>
 </body>
 </html>
